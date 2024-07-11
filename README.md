@@ -14,8 +14,8 @@ In addition, a python application is used for configuration of the backup capabi
 
 1. Install Terraform and AWS CLI
 2. provide aws credentials e.g. in /.aws/credentials
-3. Run `terraform init`
-4. Install python package "requests"
+3. Run `terraform init` within the [AWS_OpsManager](AWS_OpsManager) directory.
+4. Install python packages in [requirements.txt](requirements.txt) with `python -m pip install -r requirements.txt`
 5. Create _terraform.tfvars_ within the [AWS_OpsManager](AWS_OpsManager) directory. For this copy _terraform.tfvars.template_, fill in your required paramters and rename the file to _terraform.tfvars_
 6. Run `terraform apply`
 7. Confirm plan by entering `yes`
@@ -25,6 +25,6 @@ In addition, a python application is used for configuration of the backup capabi
 
 1. Run `terraform destroy`
 2. Confirm destruction of all resources by entering `yes`
-3. Delete the file _agentConfig.json_
+3. Delete the file `agentConfig.json` - If you don't delete it you will have config issues once you use terraform apply again.
 
 ---

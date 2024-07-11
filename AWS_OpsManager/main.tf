@@ -10,7 +10,7 @@ terraform {
 }
 
 provider "aws" {
-  profile = "979559056307_Solution-Architects.User"
+  profile = "profile Solution-Architects.User-979559056307"
   region  = var.region
 }
 
@@ -19,7 +19,12 @@ data "aws_ami" "AWSlinux2" {
 
   filter {
     name   = "name"
-    values = ["amzn2-ami-hvm-2.0.20210721.2-x86_64-gp2"]
+    values = ["amzn2-ami-hvm-*-ebs"]
+  }
+
+  filter {
+    name   = "architecture"
+    values = ["x86_64"]
   }
 
   owners = ["amazon"] # Canonical
