@@ -32,3 +32,5 @@ override.tf.json
 .DS_Store
 AWS_OpsManager/agentConfig.json
 AWS_OpsManager/.DS_Store
+.venv/
+AWS_OpsManager/terraform.tfvars
